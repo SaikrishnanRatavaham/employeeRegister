@@ -1,0 +1,56 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a class="navbar-brand" >Pace Wisdom Solutions</a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" > <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" ></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled"></a>
+      </li>
+    </ul>
+    <span class="badge badge-light" (click)="SignOut()" style="margin-top: 4px; font-size: 14px; color: #4a4a4b; cursor: pointer; background-color: #ffffff;">Sign Out</span>
+
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-9" >
+      <h1 class="mb-3" style="margin-top: 132px;font-size: 1.5rem;">Employees details</h1>
+    </div>
+    <div class="col-3" style="text-align: end;">
+      <button type="button" style=" margin-top: 134px;
+        border-radius: 60px;" (click)="createList()" class=" btn btn-primary btn-sm">ADD NEW</button>
+    </div>
+  </div>
+  <div class="separator mb-3"></div>
+  <div class="row">
+    <div class="col-12" >
+      <!-- <div [ngClass]="{'card d-flex flex-row mb-3': true, 'active':isSelected(p)}"
+        *ngFor="let p of customerDetails  | paginate: { itemsPerPage:page  , currentPage:currentPage  }; let i = index"   [contextMenu]="basicMenu" [contextMenuSubject]="p"> -->
+      <div class="card d-flex flex-row mb-3"  *ngFor="let listOfEmployeesDetails of listOfEmployees; let i = index" >
+        <div class="d-flex flex-grow-1 min-width-zero">
+          <div
+            class="card-body align-self-center d-flex flex-column flex-lg-row justify-content-between min-width-zero align-items-lg-center">
+            <a class="d-flex" href="javascript:;">
+            <img src="{{listOfEmployeesDetails.imageUrls}}" class="images-log"
+              style="width: 40px;height: auto;padding-left: 8px;" />
+            </a>
+            <a href="javascript:;" class="  w-20 w-sm-100">
+              <p    class="list-item-heading mb-0 ">{{listOfEmployeesDetails.firstName}}</p>
+            </a>
+            <p   class="mb-0 text-muted text-small truncate w-20 w-sm-100">{{listOfEmployeesDetails.email}}</p>
+            <p  class="mb-0 text-muted text-small truncate w-20  w-sm-100">{{listOfEmployeesDetails.location}}</p>
+            <p   class="mb-0 text-muted text-small  truncate w-20 w-sm-100">{{listOfEmployeesDetails.phoneNumber}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

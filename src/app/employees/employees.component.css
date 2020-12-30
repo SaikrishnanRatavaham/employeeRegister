@@ -1,0 +1,78 @@
+.card {
+  border: initial;
+  background: white;
+  border-radius: 0.1rem;
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.04), 0 1px 6px rgba(0, 0, 0, 0.04);
+}
+.rounded .card {
+  border-radius: 0.75rem;
+}
+
+p {
+  font-family: Lato;
+}
+
+img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+.hoverable {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  height: 110px;
+  width: 110px;
+  border: 5px solid #efe4e4;
+  border-radius: 50%;
+}
+.hoverable .hover-text {
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.hoverable .background {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 1;
+}
+.hoverable:hover .hover-text {
+  display: block;
+}
+.hoverable:hover .background {
+  display: block;
+}
+
+#fileInput {
+  display: none;
+}
+
+.h1 {
+  font-size: 1.75rem;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.separator {
+  border-bottom: 1px solid #d7d7d7;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}

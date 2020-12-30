@@ -1,0 +1,49 @@
+.navbar {
+  background: white;
+  height: 100px;
+  padding: 1.5rem 0 1.5rem 0;
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.04), 0 1px 6px rgba(0, 0, 0, 0.04);
+}
+
+div#navbarTogglerDemo01 {
+  align-items: center !important;
+  padding: 40px;
+}
+
+.card {
+  border: initial;
+  background: white;
+  border-radius: 0.1rem;
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.04), 0 1px 6px rgba(0, 0, 0, 0.04);
+  transition: 0.3s;
+}
+.card {
+  border-radius: 0.75rem;
+}
+.list-item-heading {
+  font-size: 1rem;
+}
+p {
+  font-size: 0.85rem;
+  line-height: 1.3rem;
+  font-family: "Nunito", sans-serif;
+}
+.text-muted {
+  color: #909090 !important;
+}
+
+a {
+  color: #3a3a3a;
+  transition: color 200ms;
+  outline: initial !important;
+}
+
+.separator {
+  border-bottom: 1px solid #d7d7d7;
+}
+.btn-primary:hover,
+a.btn-primary:not([href]):not([tabindex]):hover {
+  color: #fff;
+  background-color: #0f3d64;
+  border-color: #0f3d64;
+}
